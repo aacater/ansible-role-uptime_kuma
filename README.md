@@ -1,9 +1,9 @@
-# Ansible Role: ${REPO_NAME}
+# Ansible Role: Template
 
-[![CI](https://github.com/aacater/ansible-role-${REPO_NAME}/workflows/CI/badge.svg?event=push)](https://github.com/aacater/ansible-role-${REPO_NAME}/actions?query=workflow%3ACI)
+[![CI](https://github.com/aacater/ansible-role-template/workflows/CI/badge.svg?event=push)](https://github.com/aacater/ansible-role-template/actions?query=workflow%3ACI)
 [![LICENSE](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-${REPO_NAME_TITLE} for an Ansible role.
+Template for an Ansible role.
 
 ## Requirements
 
@@ -22,7 +22,7 @@ None.
 
     - hosts: servers
       roles:
-        - aacater.${REPO_NAME}
+        - aacater.template
 
 ## License
 

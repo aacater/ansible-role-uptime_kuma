@@ -8,9 +8,9 @@
       when: ansible_distribution == 'Ubuntu'
 
   tasks:
-    - name: "Include aacater.${REPO_NAME}"
+    - name: "Include aacater.template"
       include_role:
-        name: "aacater.${REPO_NAME}"
+        name: "aacater.template"
 
   # post_tasks:
   #   - name: Ensure app is running.
