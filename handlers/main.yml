@@ -1,2 +1,16 @@
 ---
-# handlers file for template
+- name:  restart service
+  systemd:
+    state: restarted
+    enabled: true
+    name: uptime-kuma
+    daemon_reload: true
+
+- name: set directory permissions
+  ansible.builtin.file:
+    path: "{{ uptime_kuma_app }}"
+    state: directory
+    recurse: true
+    owner: "{{ uptime_kuma_user }}"
+    group: "{{ uptime_kuma_user }}"
+  notify: restart uptime-kuma

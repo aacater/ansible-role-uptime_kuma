@@ -1,18 +1,17 @@
-# Ansible Role: Template
+# Ansible Role: Uptime Kuma
 
-[![CI](https://github.com/aacater/ansible-role-template/workflows/CI/badge.svg?event=push)](https://github.com/aacater/ansible-role-template/actions?query=workflow%3ACI)
+[![CI](https://github.com/aacater/ansible-role-uptime_kuma/workflows/CI/badge.svg?event=push)](https://github.com/aacater/ansible-role-uptime_kuma/actions?query=workflow%3ACI)
 [![LICENSE](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-Template for an Ansible role.
+Installs [Uptime Kuma](https://github.com/louislam/uptime-kuma).
 
 ## Requirements
 
-None.
+NodeJS >= 14
 
 ## Role Variables
 
 None.
-
 
 ## Dependencies
 
@@ -22,7 +21,8 @@ None.
 
     - hosts: servers
       roles:
-        - aacater.template
+        - geerlingguy.nodejs
+        - aacater.uptime_kuma
 
 ## License
 
