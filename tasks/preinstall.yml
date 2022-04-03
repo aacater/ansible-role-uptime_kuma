@@ -25,4 +25,5 @@
   with_items:
     - "{{ uptime_kuma_app }}"
     - "{{ uptime_kuma_data }}"
+  tags: molecule-idempotence-notest
   

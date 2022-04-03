@@ -23,3 +23,7 @@
         status_code:
           - 200
           - 302
+      register: result
+      until: result.status == 200
+      retries: 60
+      delay: 1

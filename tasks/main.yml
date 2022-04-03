@@ -19,6 +19,7 @@
   become_user: "{{ uptime_kuma_user }}"
   become: true
   register: uptime_kuma_git_output
+  tags: molecule-idempotence-notest
 
 - name: install npm dependencies 
   community.general.npm:
@@ -27,7 +28,7 @@
     production: true
   become_user: "{{ uptime_kuma_user }}"
   become: true
-  when: uptime_kuma_git_output.changed
+  when: uptime_kuma_git_output is defined and uptime_kuma_git_output.changed
   notify: restart service
 
 - name: run download-dist
@@ -36,7 +37,7 @@
     chdir: "{{ uptime_kuma_app }}"
   become_user: "{{ uptime_kuma_user }}"
   become: true
-  when: uptime_kuma_git_output.changed
+  when: uptime_kuma_git_output is defined and uptime_kuma_git_output.changed
   notify: restart service
 
 - name: copy .env file
