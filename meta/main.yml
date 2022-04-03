@@ -4,7 +4,7 @@ dependencies: []
 galaxy_info:
   author: aacater
   role_name: uptime_kuma
-  description: Uptime Kuma
+  description: Install Uptime Kuma
 
   license: MIT
 
@@ -19,11 +19,6 @@ galaxy_info:
       versions:
         - bionic
         - focal
-    - name: Fedora
-      versions:
-        - '33'
-        - '34'
-        - '35'
     - name: EL
       versions:
         - '7'

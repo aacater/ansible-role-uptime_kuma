@@ -1,7 +1,9 @@
 # Ansible Role: Uptime Kuma
 
+[![LICENSE](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![CI](https://github.com/aacater/ansible-role-uptime_kuma/workflows/CI/badge.svg?event=push)](https://github.com/aacater/ansible-role-uptime_kuma/actions?query=workflow%3ACI)
-[![LICENSE](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
+[![role](https://img.shields.io/static/v1?label=role&message=aacater.uptime_kuma&color=blue)](https://galaxy.ansible.com/aacater/uptime_kuma)
+![Ansible Role](https://img.shields.io/ansible/role/d/58651)
 
 Installs [Uptime Kuma](https://github.com/louislam/uptime-kuma).
 
