@@ -30,7 +30,6 @@ galaxy_info:
         - '8'
 
   galaxy_tags:
-    - Uptime Kuma
-    - Monitoring
-    - Status
-    - Dashboard
+    - monitoring
+    - status
+    - dashboard
