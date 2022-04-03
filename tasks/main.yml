@@ -25,7 +25,6 @@
   with_items:
     - "{{ uptime_kuma_app }}"
     - "{{ uptime_kuma_data }}"
-  tags: molecule-idempotence-notest
 
 # * preinstall - dependencies
 - name: Install git
@@ -45,7 +44,6 @@
   become: true
   register: uptime_kuma_git_output
   changed_when: uptime_kuma_git_output.before != uptime_kuma_git_output.after
-  tags: molecule-idempotence-notest
 
 - name: install npm dependencies   # noqa no-handler
   community.general.npm:
