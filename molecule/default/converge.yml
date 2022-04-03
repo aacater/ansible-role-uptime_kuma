@@ -11,3 +11,13 @@
     - name: "Include aacater.template"
       include_role:
         name: "aacater.template"
+
+  # post_tasks:
+  #   - name: Ensure app is running.
+  #     uri:
+  #       url: http://127.0.0.1:5601/login
+  #       status_code: 200
+  #     register: result
+  #     until: result.status == 200
+  #     retries: 60
+  #     delay: 1
