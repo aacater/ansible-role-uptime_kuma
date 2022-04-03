@@ -12,6 +12,10 @@
       include_role:
         name: geerlingguy.nodejs
       vars:
+        # without this, the role fails with the error
+        # chown failed: failed to look up user <user>.
+        # https://github.com/geerlingguy/ansible-role-nodejs/issues/66
+        # https://github.com/geerlingguy/ansible-role-nodejs/pull/75
         nodejs_install_npm_user: "{{ ansible_user_id }}"
 
     - name: "Include aacater.uptime_kuma"

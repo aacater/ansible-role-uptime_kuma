@@ -1,6 +1,31 @@
 ---
-- name: include preinstall tasks
-  include_tasks: preinstall.yml
+# * preinstall - general
+- name: ensure group exists
+  ansible.builtin.group:
+    name: "{{ uptime_kuma_group }}"
+    system: true
+    gid: "{{ uptime_kuma_group_gid | default(omit) }}"
+
+- name: ensure user exists
+  ansible.builtin.user:
+    name: "{{ uptime_kuma_user }}"
+    group: "{{ uptime_kuma_group }}"
+    system: true
+    create_home: true
+    uid: "{{ uptime_kuma_user_uid | default(omit) }}"
+
+- name: ensure directory exists
+  ansible.builtin.file:
+    path: "{{ item }}"
+    recurse: true
+    owner: "{{ uptime_kuma_user }}"
+    group: "{{ uptime_kuma_group }}"
+    state: directory
+    follow: false
+  with_items:
+    - "{{ uptime_kuma_app }}"
+    - "{{ uptime_kuma_data }}"
+  tags: molecule-idempotence-notest
 
 # * preinstall - dependencies
 - name: Install git
@@ -8,9 +33,6 @@
     name: git
     state: present
   when: install_git
-
-  #! check package.json for current version
-#! skip clone if they match
 
 # * install - clone git repos
 - name: Clone git
