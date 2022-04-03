@@ -1,6 +1,7 @@
 # Ansible Role: Template
 
 [![CI](https://github.com/aacater/ansible-role-template/workflows/CI/badge.svg?event=push)](https://github.com/aacater/ansible-role-template/actions?query=workflow%3ACI)
+[![LICENSE](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
 Template for an Ansible role.
 
