@@ -6,6 +6,7 @@ After=network.target
 [Service]
 Type=simple
 User={{ uptime_kuma_user }}
+User={{ uptime_kuma_group }}
 WorkingDirectory={{ uptime_kuma_app }}
 EnvironmentFile={{ uptime_kuma_app }}/.env
 ExecStart=/usr/bin/npm run start-server

@@ -4,12 +4,12 @@
 
   pre_tasks:
     - name: Update apt cache.
-      apt: update_cache=yes cache_valid_time=600
+      ansible.builtin.apt: update_cache=yes cache_valid_time=600
       when: ansible_distribution == 'Ubuntu' or ansible_distribution == 'Debian'
 
   tasks:
     - name: Install nodejs
-      include_role:
+      ansible.builtin.include_role:
         name: geerlingguy.nodejs
       vars:
         # without this, the role fails with the error
@@ -19,12 +19,12 @@
         nodejs_install_npm_user: "{{ ansible_user_id }}"
 
     - name: "Include aacater.uptime_kuma"
-      include_role:
+      ansible.builtin.include_role:
         name: "aacater.uptime_kuma"
 
   post_tasks:
     - name: Ensure uptime kuma is running.
-      uri:
+      ansible.builtin.uri:
         url: http://127.0.0.1:3001/dashboard
         status_code:
           - 200
