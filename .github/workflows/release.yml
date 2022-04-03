@@ -13,7 +13,7 @@ name: Release
 
 defaults:
   run:
-    working-directory: 'geerlingguy.nginx'
+    working-directory: 'aacater.template'
 
 jobs:
 
@@ -24,7 +24,7 @@ jobs:
       - name: Check out the codebase.
         uses: actions/checkout@v2
         with:
-          path: 'geerlingguy.nginx'
+          path: 'aacater.template'
 
       - name: Set up Python 3.
         uses: actions/setup-python@v2

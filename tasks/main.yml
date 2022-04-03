@@ -1,2 +1,6 @@
 ---
 # tasks file for template
+- name: Molecule Hello World!
+  debug:
+    msg: "{{ ansible_distribution }} {{ ansible_distribution_version }} "
+    
