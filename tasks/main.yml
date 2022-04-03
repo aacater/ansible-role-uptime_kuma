@@ -9,6 +9,9 @@
     state: present
   when: install_git
 
+  #! check package.json for current version
+#! skip clone if they match
+
 # * install - clone git repos
 - name: Clone git
   ansible.builtin.git:

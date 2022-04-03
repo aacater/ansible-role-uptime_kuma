@@ -11,6 +11,8 @@
     - name: Install nodejs
       include_role:
         name: geerlingguy.nodejs
+      vars:
+        nodejs_install_npm_user: "{{ ansible_user_id }}"
 
     - name: "Include aacater.uptime_kuma"
       include_role:
