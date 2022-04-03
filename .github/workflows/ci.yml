@@ -39,7 +39,7 @@ jobs:
     name: Molecule
     runs-on: ubuntu-latest
     strategy:
-      max-parallel: 4
+      max-parallel: 2
       matrix:
         distro:
           - rockylinux8
