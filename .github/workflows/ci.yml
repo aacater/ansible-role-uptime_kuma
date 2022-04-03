@@ -44,12 +44,12 @@ jobs:
           # - rockylinux8
           # - centos8
           # - centos7
-          - ubuntu2004
+          # - ubuntu2004
           # - ubuntu1804
           # - debian11
           # - debian10
           # - debian9
-          # - fedora35
+          - fedora35
           # - fedora34
           # - fedora33
 
