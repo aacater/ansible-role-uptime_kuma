@@ -1,5 +1,6 @@
 ---
 uptime_kuma_version: 1.13.1
+install_git: true
 uptime_kuma_git: https://github.com/louislam/uptime-kuma
 
 uptime_kuma_user: kuma
@@ -7,5 +8,3 @@ uptime_kuma_group: kuma
 
 uptime_kuma_app: /opt/uptime-kuma/app
 uptime_kuma_data: /opt/uptime-kuma/data
-
-install_git: true
