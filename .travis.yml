@@ -1,8 +1,6 @@
 ---
 language: python
-python: "3.9"
-
-os: linux
+python: "2.7"
 
 # Use the new container infrastructure
 sudo: false
@@ -11,7 +9,7 @@ sudo: false
 addons:
   apt:
     packages:
-      - python-pip
+    - python-pip
 
 install:
   # Install ansible
@@ -29,4 +27,3 @@ script:
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
-  
