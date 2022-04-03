@@ -3,8 +3,8 @@ dependencies: []
 
 galaxy_info:
   author: aacater
-  role_name: template
-  description: Template for an Ansible role
+  role_name: ${REPO_NAME}
+  description: ${REPO_NAME_TITLE} for an Ansible role
 
   license: MIT
 
