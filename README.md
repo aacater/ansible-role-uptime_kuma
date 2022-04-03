@@ -7,11 +7,36 @@ Installs [Uptime Kuma](https://github.com/louislam/uptime-kuma).
 
 ## Requirements
 
-NodeJS >= 14
+- NodeJS >= 14
 
 ## Role Variables
 
-None.
+Available variables are listed below, along with default values (see [defaults/main.yml](defaults/main.yml)):
+
+    uptime_kuma_version: 1.13.1
+
+The version of uptime kuma to install.
+
+    install_git: true
+
+This role uses the [package module](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html) to install git. Set `install_git` to false if you want to skip this and install git manually.
+
+    uptime_kuma_git: https://github.com/louislam/uptime-kuma
+
+Url of git repository that will be cloned.
+
+    uptime_kuma_user: kuma
+    uptime_kuma_group: kuma
+
+User and group names to install uptime kuma as.
+
+    uptime_kuma_app: /opt/uptime-kuma/app
+
+The location to install uptime kuma.
+
+    uptime_kuma_data: /opt/uptime-kuma/data
+
+The location to store data for uptime kuma.
 
 ## Dependencies
 
